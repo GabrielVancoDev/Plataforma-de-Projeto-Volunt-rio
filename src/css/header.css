@@ -1,0 +1,63 @@
+/* Cores principais 
+- 💙 Azul claro
+Confiança, tranquilidade, segurança
+#4A90E2 ou #AEDFF7
+
+- 💚 Verde
+Esperança, crescimento, renovação
+#4CAF50 ou #A8E6A3
+
+- 🧡 Laranja suave
+Energia positiva, entusiasmo, empatia
+#FFA726 ou #FFE0B2
+
+- 🤍 Branco
+Paz, simplicidade, clareza
+#FFFFFF
+
+🩶 Cinza claro
+Neutralidade e acessibilidade para textos
+#F5F5F5 ou #CCCCCC
+
+
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #4A90E2;
+    color: #fff;
+}
+
+
+.nav-bar {
+    background-color: #4A90E2;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-bar li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.nav-bar a {
+    color: #fff;
+    text-decoration: none;
+}
