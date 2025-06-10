@@ -10,18 +10,35 @@
   <body>
     <!-- CABEÇALHO -->
     <header>
-      <h2>Projeto Voluntário</h2>
-      <nav class="nav-bar">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li>
-            <a href="cadastroNecessidades.html">Cadastro de Necessidades</a>
-          </li>
-          <li>
-            <a href="viewNecessidades.html">Visualização de Necessidades</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="container">
+        <nav class="nav-container">
+          <a href="#" class="logo">🌟 VoluntáriosUnidos</a>
+
+          <div class="mobile-toggle" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <ul class="nav-menu" id="navMenu">
+            <li class="nav-item">
+              <a href="#" class="nav-link active" onclick="showPage('home')"
+                >🏠 Início</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" onclick="showPage('cadastro')"
+                >➕ Nova Necessidade</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" onclick="showPage('necessidades')"
+                >🔍 Oportunidades</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
   </body>
 </html>

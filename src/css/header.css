@@ -1,63 +1,172 @@
-/* Cores principais 
-- 💙 Azul claro
-Confiança, tranquilidade, segurança
-#4A90E2 ou #AEDFF7
-
-- 💚 Verde
-Esperança, crescimento, renovação
-#4CAF50 ou #A8E6A3
-
-- 🧡 Laranja suave
-Energia positiva, entusiasmo, empatia
-#FFA726 ou #FFE0B2
-
-- 🤍 Branco
-Paz, simplicidade, clareza
-#FFFFFF
-
-🩶 Cinza claro
-Neutralidade e acessibilidade para textos
-#F5F5F5 ou #CCCCCC
-
-
-*/
+/* Reset e configurações gerais */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+  background: #0a0a0a;
+  color: #ffffff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Fundo animado com partículas */
+.background-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: radial-gradient(
+    circle at 25% 25%,
+    #1a1a2e 0%,
+    #16213e 25%,
+    #0f0f23 50%,
+    #000000 100%
+  );
+}
+
+.background-animation::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><radialGradient id="g"><stop offset="0%" stop-color="%23ffffff" stop-opacity="0.1"/><stop offset="100%" stop-color="%23ffffff" stop-opacity="0"/></radialGradient></defs><circle cx="50" cy="50" r="1" fill="url(%23g)"/></svg>')
+    repeat;
+  animation: float 20s infinite linear;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg);
+  }
+}
+
+/* Container principal */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header moderno */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: #4A90E2;
-    color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
 }
 
-
-.nav-bar {
-    background-color: #4A90E2;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
 }
 
-.nav-bar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #00d4ff, #ff6b6b, #4ecdc4);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+  position: relative;
 }
 
-.nav-bar li {
-    display: inline-block;
-    margin-right: 10px;
+.logo::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00d4ff, #ff6b6b);
+  transition: width 0.3s ease;
 }
 
-.nav-bar a {
-    color: #fff;
-    text-decoration: none;
+.logo:hover::after {
+  width: 100%;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.nav-link:hover::before {
+  left: 100%;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background: linear-gradient(135deg, #00d4ff, #4ecdc4);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+}
+
+/* Menu mobile */
+.mobile-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.mobile-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #ffffff;
+  margin: 3px 0;
+  transition: 0.3s;
+  border-radius: 2px;
 }
