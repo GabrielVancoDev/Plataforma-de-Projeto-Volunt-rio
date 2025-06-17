@@ -42,180 +42,225 @@
     </header>
 
     <!-- Página Inicial -->
-
-    <section id="home" class="page active">
-      <div class="container">
-        <div class="hero-section">
-          <div class="hero-content">
-            <h1 class="hero-content">Transformando Comunidades</h1>
-            <p class="hero-subtitle">
-              Conectamos ONGs e Voluntários através de uma plataforma intuitiva
-              e moderna. Juntos construímos um futuro melhor para todos.
-            </p>
-            <div class="hero-buttons">
-              <button class="btn btn-primary" onclick="showPage('cadastro')">
-                ✨ Cadastrar Necessidade
-              </button>
+    <main>
+      <section id="home" class="page active">
+        <div class="container">
+          <div class="hero-section">
+            <div class="hero-content">
+              <h1 class="hero-content">Transformando Comunidades</h1>
+              <p class="hero-subtitle">
+                Conectamos ONGs e Voluntários através de uma plataforma
+                intuitiva e moderna. Juntos construímos um futuro melhor para
+                todos.
+              </p>
+              <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="showPage('cadastro')">
+                  ✨ Cadastrar Necessidade
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- Página de cadastro -->
-    <section id="cadastro" class="page">
-      <div class="container">
-        <div class="section-card">
-          <h2 class="class-title">➕ Nova Necessidade</h2>
-          <p class="section-description">
-            Cadastre sua necessidade de voluntários ou doações e alcance pessoas
-            dispostas a ajudar.
-          </p>
-          <form id="necessidadeForm" class="form-grid">
-            <div class="form-group">
-              <label class="form-label" for="nomeInstituicao">
-                Nome da Instituição <span class="required">*</span>
-              </label>
-              <input
-                type="text"
-                id="nomeInstituicao"
-                name="nomeInstituicao"
-                class="form-input"
-                placeholder="Ex: ONG Esperança"
-                required
-              />
-            </div>
-
-            <div class="form-row cols-2">
+      </section>
+      <!-- Página de cadastro -->
+      <section id="cadastro" class="page">
+        <div class="container">
+          <div class="section-card">
+            <h2 class="class-title">➕ Nova Necessidade</h2>
+            <p class="section-description">
+              Cadastre sua necessidade de voluntários ou doações e alcance
+              pessoas dispostas a ajudar.
+            </p>
+            <form id="necessidadeForm" class="form-grid">
               <div class="form-group">
-                <label class="form-label" for="tipoAjuda">
-                  Tipo de Ajuda <span class="required">*</span>
+                <label class="form-label" for="nomeInstituicao">
+                  Nome da Instituição <span class="required">*</span>
                 </label>
-                <select
-                  id="tipoAjuda"
-                  name="tipoAjuda"
-                  class="form-select"
-                  required
-                >
-                  <option value="">Selecione o tipo</option>
-                  <option value="Educação">📚 Educação</option>
-                  <option value="Saúde">🏥 Saúde</option>
-                  <option value="Meio Ambiente">🌱 Meio Ambiente</option>
-                  <option value="Doação de Alimentos">
-                    🍽️ Doação de Alimentos
-                  </option>
-                  <option value="Doação de Roupas">👕 Doação de Roupas</option>
-                  <option value="Outros">🤝 Outros</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="titulo" class="form-label"
-                  >Título da Necessidade <span class="required">*</span></label
-                >
                 <input
                   type="text"
-                  id="titulo"
-                  name="titulo"
+                  id="nomeInstituicao"
+                  name="nomeInstituicao"
                   class="form-input"
-                  placeholder="Ex: Reforço escolar para Crianças"
+                  placeholder="Ex: ONG Esperança"
                   required
                 />
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="descricao" class="form-label">
-                Descrição Detalhada <span class="required">*</span>
-              </label>
-              <textarea
-                name="descricao"
-                id="descricao"
-                class="form-textarea"
-                placeholder="Descreva detalhadamente a necessidade, como os voluntários podem ajudar, horários, etc..."
-              ></textarea>
-            </div>
-            <div class="form-row" cols-2>
-              <div class="form-group">
-                <label for="cep" class="form-label"
-                  >CEP <span class="required"></span>*</label
-                >
-                <input
-                  type="text"
-                  id="cep"
-                  name="cep"
-                  class="form-input"
-                  placeholder="00000-000"
-                  maxlength="9"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="rua" class="form-label">Rua</label>
-                <input
-                  type="text"
-                  id="rua"
-                  name="rua"
-                  class="form-input"
-                  readonly
-                />
-              </div>
-              <div class="form-row cols-2">
-                <div class="form-group">
-                  <label class="form-label" for="bairro">Bairro</label>
-                  <input
-                    type="text"
-                    id="bairro"
-                    name="bairro"
-                    class="form-input"
-                    readonly
-                  />
-                </div>
-
-                <div class="form-group">
-                  <label class="form-label" for="cidade">Cidade</label>
-                  <input
-                    type="text"
-                    id="cidade"
-                    name="cidade"
-                    class="form-input"
-                    readonly
-                  />
-                </div>
               </div>
 
               <div class="form-row cols-2">
                 <div class="form-group">
-                  <label class="form-label" for="estado">Estado</label>
-                  <input
-                    type="text"
-                    id="estado"
-                    name="estado"
-                    class="form-input"
-                    readonly
-                  />
-                </div>
-
-                <div class="form-group">
-                  <label class="form-label" for="contato">
-                    Contato <span class="required">*</span>
+                  <label class="form-label" for="tipoAjuda">
+                    Tipo de Ajuda <span class="required">*</span>
                   </label>
+                  <select
+                    id="tipoAjuda"
+                    name="tipoAjuda"
+                    class="form-select"
+                    required
+                  >
+                    <option value="">Selecione o tipo</option>
+                    <option value="Educação">📚 Educação</option>
+                    <option value="Saúde">🏥 Saúde</option>
+                    <option value="Meio Ambiente">🌱 Meio Ambiente</option>
+                    <option value="Doação de Alimentos">
+                      🍽️ Doação de Alimentos
+                    </option>
+                    <option value="Doação de Roupas">
+                      👕 Doação de Roupas
+                    </option>
+                    <option value="Outros">🤝 Outros</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="titulo" class="form-label"
+                    >Título da Necessidade
+                    <span class="required">*</span></label
+                  >
                   <input
                     type="text"
-                    id="contato"
-                    name="contato"
+                    id="titulo"
+                    name="titulo"
                     class="form-input"
-                    placeholder="email@exemplo.com ou (11) 99999-9999"
+                    placeholder="Ex: Reforço escolar para Crianças"
                     required
                   />
                 </div>
               </div>
+              <div class="form-group">
+                <label for="descricao" class="form-label">
+                  Descrição Detalhada <span class="required">*</span>
+                </label>
+                <textarea
+                  name="descricao"
+                  id="descricao"
+                  class="form-textarea"
+                  placeholder="Descreva detalhadamente a necessidade, como os voluntários podem ajudar, horários, etc..."
+                ></textarea>
+              </div>
+              <div class="form-row" cols-2>
+                <div class="form-group">
+                  <label for="cep" class="form-label"
+                    >CEP <span class="required"></span>*</label
+                  >
+                  <input
+                    type="text"
+                    id="cep"
+                    name="cep"
+                    class="form-input"
+                    placeholder="00000-000"
+                    maxlength="9"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="rua" class="form-label">Rua</label>
+                  <input
+                    type="text"
+                    id="rua"
+                    name="rua"
+                    class="form-input"
+                    readonly
+                  />
+                </div>
+                <div class="form-row cols-2">
+                  <div class="form-group">
+                    <label class="form-label" for="bairro">Bairro</label>
+                    <input
+                      type="text"
+                      id="bairro"
+                      name="bairro"
+                      class="form-input"
+                      readonly
+                    />
+                  </div>
 
-              <button type="submit" class="btn btn-primary">
-                🚀 Cadastrar Necessidade
-              </button>
-            </div>
-          </form>
+                  <div class="form-group">
+                    <label class="form-label" for="cidade">Cidade</label>
+                    <input
+                      type="text"
+                      id="cidade"
+                      name="cidade"
+                      class="form-input"
+                      readonly
+                    />
+                  </div>
+                </div>
+
+                <div class="form-row cols-2">
+                  <div class="form-group">
+                    <label class="form-label" for="estado">Estado</label>
+                    <input
+                      type="text"
+                      id="estado"
+                      name="estado"
+                      class="form-input"
+                      readonly
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="contato">
+                      Contato <span class="required">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="contato"
+                      name="contato"
+                      class="form-input"
+                      placeholder="email@exemplo.com ou (11) 99999-9999"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                  🚀 Cadastrar Necessidade
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <!-- Página de oportunidades -->
+      <section id="necessidades" class="page">
+        <div class="container">
+          <div class="section-card">
+            <h2 class="section-title">🔍 Oportunidades de Impacto</h2>
+            <p class="section-description">
+              Descubra como você pode fazer a diferença na sua comunidade.
+            </p>
+
+            <!-- Filtros -->
+            <div class="filters-container">
+              <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input
+                  type="text"
+                  id="searchInput"
+                  class="search-input"
+                  placeholder="Pesquisar por título ou descrição..."
+                />
+              </div>
+              <select id="filterTipo" class="filter-select">
+                <option value="">Todos os tipos</option>
+                <option value="Educação">📚 Educação</option>
+                <option value="Saúde">🏥 Saúde</option>
+                <option value="Meio Ambiente">🌱 Meio Ambiente</option>
+                <option value="Doação de Alimentos">
+                  🍽️ Doação de Alimentos
+                </option>
+                <option value="Doação de Roupas">👕 Doação de Roupas</option>
+                <option value="Outros">🤝 Outros</option>
+              </select>
+            </div>
+            <!-- Grid de Oportunidades -->
+            <div id="opportunitiesContainer" class="opportunities-grid">
+              <!-- Cards serão inseridos aqui dinamicamente -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
