@@ -1,5 +1,3 @@
-
-
 /* Página inicial */
 .hero-section {
   min-height: calc(100vh - 80px);
@@ -156,8 +154,6 @@
   color: #ff6b6b;
 }
 
-
-
 .form-input,
 .form-select,
 .form-textarea {
@@ -205,3 +201,107 @@
 .form-row.cols-2 {
   grid-template-columns: 1fr 1fr;
 }
+
+/* Cards de necessidades */
+
+.oportunities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.opportunity-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.opportunity-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.opportunity-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(0, 212, 255, 0.2);
+  border-color: rgba(0, 212, 255, 0.3);
+}
+
+.opportunity-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #00d4ff, #4ecdc4, #ff6b6b);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.card-institution {
+  color: #00d4ff;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.card-type {
+  background: linear-gradient(135deg, #00d4ff, #4ecdc4);
+  color: #000000;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card-description {
+  color: #b8b8b8;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.card-location {
+  color: #888888;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card-contact {
+  background: rgba(0, 212, 255, 0.1);
+  padding: 1rem;
+  border-radius: 10px;
+  border-left: 3px solid #00d4ff;
+  color: #00d4ff;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/*Filtros modernos  */
