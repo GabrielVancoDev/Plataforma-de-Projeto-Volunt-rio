@@ -5,6 +5,11 @@ Plataforma web desenvolvida para conectar instituições sociais com pessoas dis
 
 ---
 
+# 💡 Objetivos
+A página consiste em divulgar projetos sociais, possibilitando mais divulgação na região da página atraindo mais voluntários dispostos a ajudar. Além da possibilidade de publicar mais oportunidades, com local, informações de contato e descrição da ação.
+
+---
+
 ## 📸 Imagens do Projeto
 
 > ![image](https://github.com/user-attachments/assets/6ab718cc-7cde-43ed-9c5c-7d73f67c8acb)
