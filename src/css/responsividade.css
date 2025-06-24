@@ -216,6 +216,7 @@
 /* Cards de necessidades */
 .opportunities-grid {
   display: grid;
+  justify-content: center;
   grid-template-columns: 1fr;
   gap: 1.5rem;
   padding: 0 1rem;
@@ -225,6 +226,7 @@
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
+
   padding: 1.5rem;
   position: relative;
   overflow: hidden;
@@ -464,11 +466,13 @@ footer {
 
   .opportunities-grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
     gap: 2rem;
     padding: 0;
   }
 
   .opportunity-card {
+    align-items: center;
     padding: 2rem;
   }
 
@@ -578,6 +582,7 @@ footer {
   }
 
   .opportunity-card {
+    align-content: center;
     padding: 1rem;
   }
 
