@@ -7,13 +7,8 @@ Plataforma web desenvolvida para conectar instituições sociais com pessoas dis
 
 ## 📸 Imagens do Projeto
 
-> ⚠️ Adicione capturas de tela do sistema aqui para mostrar a interface (ex: home, formulário de cadastro, lista de oportunidades).
-
-```bash
-# Exemplo:
-![Página Inicial](images/home.png)
-![Cadastro de Necessidade](images/cadastro.png)
-```
+> ![image](https://github.com/user-attachments/assets/6ab718cc-7cde-43ed-9c5c-7d73f67c8acb)
+> ![image](https://github.com/user-attachments/assets/97858026-7b77-44b2-b5a2-94e5f143e67c)
 
 ---
 
@@ -82,6 +77,4 @@ Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) par
 
 **Gabriel Gandolfi**
 
-📧 [Seu Email]  
-🔗 [Seu LinkedIn]  
 📁 Projeto acadêmico - 2025
